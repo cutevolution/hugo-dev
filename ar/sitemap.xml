@@ -7,12 +7,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://cutevolution.github.io/hugo-dev/categories/"
+                href="https://cutevolution.github.io/hugo-dev/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://cutevolution.github.io/hugo-dev/zh-cn/categories/"
+                href="https://cutevolution.github.io/hugo-dev/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -24,13 +24,8 @@
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://cutevolution.github.io/hugo-dev/post/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="zh-cn"
-                href="https://cutevolution.github.io/hugo-dev/zh-cn/post/"
+                href="https://cutevolution.github.io/hugo-dev/post/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -43,12 +38,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://cutevolution.github.io/hugo-dev/tags/"
+                href="https://cutevolution.github.io/hugo-dev/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://cutevolution.github.io/hugo-dev/zh-cn/tags/"
+                href="https://cutevolution.github.io/hugo-dev/tags/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -69,7 +64,7 @@
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="zh-cn"
                 href="https://cutevolution.github.io/hugo-dev/p/placeholder-text/"
                 />
     <xhtml:link
@@ -83,12 +78,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://cutevolution.github.io/hugo-dev/"
+                href="https://cutevolution.github.io/hugo-dev/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://cutevolution.github.io/hugo-dev/zh-cn/"
+                href="https://cutevolution.github.io/hugo-dev/"
                 />
     <xhtml:link
                 rel="alternate"
