@@ -874,16 +874,26 @@
 }
 </style>
 
-<script>	
-    function initLoading() {
-        let loading = document.querySelector(".loading");
-        document.addEventListener('DOMContentLoaded', function() {
-            
-            loading.style.display = "none";
-        });
-    }
+<script>
+  
+  document.addEventListener('DOMContentLoaded', function() {
+      const loading = document.querySelector('.loading');
+      
+      
+      if (loading) loading.style.display = 'none';
 
-    initLoading();
+      
+      const originalFetch = window.fetch;
+      window.fetch = function(...args) {
+          
+          if (loading) loading.style.display = 'flex';
+          return originalFetch.apply(this, args)
+              .finally(() => {
+                  
+                  if (loading) loading.style.display = 'none';
+              });
+      };
+  });
 </script>
 
     </body>
