@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Tags on Myblog</title>
+        <title>Tags on poplars</title>
         <link>https://cutevolution.github.io/hugo-dev/tags/</link>
-        <description>Recent content in Tags on Myblog</description>
+        <description>Recent content in Tags on poplars</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cutevolution.github.io/hugo-dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>cutevolution</copyright>
+        <lastBuildDate>Wed, 26 Mar 2025 12:00:00 +0800</lastBuildDate><atom:link href="https://cutevolution.github.io/hugo-dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hugo</title>
+        <link>https://cutevolution.github.io/hugo-dev/tags/hugo/</link>
+        <pubDate>Wed, 26 Mar 2025 12:00:00 +0800</pubDate>
+        
+        <guid>https://cutevolution.github.io/hugo-dev/tags/hugo/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>博客</title>
+        <link>https://cutevolution.github.io/hugo-dev/tags/%E5%8D%9A%E5%AE%A2/</link>
+        <pubDate>Wed, 26 Mar 2025 12:00:00 +0800</pubDate>
+        
+        <guid>https://cutevolution.github.io/hugo-dev/tags/%E5%8D%9A%E5%AE%A2/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Test</title>
         <link>https://cutevolution.github.io/hugo-dev/tags/test/</link>
         <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>

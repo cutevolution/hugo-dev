@@ -1,48 +1,117 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Myblog</title>
+        <title>poplars</title>
         <link>https://cutevolution.github.io/hugo-dev/</link>
-        <description>Recent content on Myblog</description>
+        <description>Recent content on poplars</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 25 Mar 2025 21:46:02 +0800</lastBuildDate><atom:link href="https://cutevolution.github.io/hugo-dev/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Test03</title>
-        <link>https://cutevolution.github.io/hugo-dev/p/test03/</link>
-        <pubDate>Tue, 25 Mar 2025 21:46:02 +0800</pubDate>
+        <copyright>cutevolution</copyright>
+        <lastBuildDate>Wed, 26 Mar 2025 13:41:54 +0800</lastBuildDate><atom:link href="https://cutevolution.github.io/hugo-dev/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>111</title>
+        <link>https://cutevolution.github.io/hugo-dev/posts/111/</link>
+        <pubDate>Wed, 26 Mar 2025 13:41:54 +0800</pubDate>
         
-        <guid>https://cutevolution.github.io/hugo-dev/p/test03/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;https://cutevolution.github.io/hugo-dev/p/test03/11.png&#34;
-	width=&#34;640&#34;
-	height=&#34;640&#34;
-	srcset=&#34;https://cutevolution.github.io/hugo-dev/p/test03/11_hu_cd7f0eae69654c67.png 480w, https://cutevolution.github.io/hugo-dev/p/test03/11_hu_d3757bbeabf2f5ee.png 1024w&#34;
+        <guid>https://cutevolution.github.io/hugo-dev/posts/111/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>我的文章标题</title>
+        <link>https://cutevolution.github.io/hugo-dev/p/%E6%88%91%E7%9A%84%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98/</link>
+        <pubDate>Wed, 26 Mar 2025 12:00:00 +0800</pubDate>
+        
+        <guid>https://cutevolution.github.io/hugo-dev/p/%E6%88%91%E7%9A%84%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98/</guid>
+        <description>&lt;h1 id=&#34;1动态地址与静态地址&#34;&gt;1.动态地址与静态地址
+&lt;/h1&gt;&lt;p&gt;动态地址：用于临时存放数据的地址(在CE中，呈现为黑色)，每次打开进程地址都会发生改变。&lt;/p&gt;
+&lt;p&gt;静态地址：用于永久存放数据的地址(在CE中，呈现为绿色)，又称为基址。&lt;/p&gt;
+&lt;h1 id=&#34;2通过动态地址追踪静态地址&#34;&gt;2.通过动态地址，追踪静态地址
+&lt;/h1&gt;&lt;p&gt;以植物大战僵尸为例：&lt;/p&gt;
+&lt;p&gt;打开CE工具，附加到植物大战僵尸的进程当中，通过多次查询筛选之后即可得到阳光数的动态地址&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;C:%5cUsers%5cadmin%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20220515211112961.png&#34;
+	
+	
+	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;11&#34;
+		alt=&#34;image-20220515211112961&#34;
 	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;100&#34;
-		data-flex-basis=&#34;240px&#34;
 	
 &gt;&lt;/p&gt;
+&lt;p&gt;如图，拿到动态地址之后便可以对静态地址进行追踪，选中阳光的动态地址，右键-选择“找出是什么访问了这个地址”(或直接使用F6快捷键)，之后我们收集一下阳光，发现有指令被捕获到：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;C:%5cUsers%5cadmin%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20220515211435478.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20220515211435478&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;从指令的详细信息中可以看出，ecx中存储的就是单次收集阳光增加的阳光数(25)，而eax+5578就是存储阳光数量的动态地址。&lt;/p&gt;
+&lt;p&gt;eax中存储的即为指针，而5578则为偏移。&lt;/p&gt;
+&lt;p&gt;eax为寄存器，所以要继续追踪寄存器里的值，追踪到最终的静态地址。&lt;/p&gt;
+&lt;p&gt;记录下eax中的值，在CE中进行搜索：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;C:%5cUsers%5cadmin%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20220515212103375.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20220515212103375&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;可以看出有很多的值，但很多都是无用的数据，需要进行另一轮筛选，筛选过程如下：&lt;/p&gt;
+&lt;p&gt;1.将游戏关闭再重新打开&lt;/p&gt;
+&lt;p&gt;2.再打开一个新的CE附加到游戏&lt;/p&gt;
+&lt;p&gt;3.重复上述过程，再次获取寄存器中的值&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;C:%5cUsers%5cadmin%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20220515212558280.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20220515212558280&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;可以看到这次的值为306DF070&lt;/p&gt;
+&lt;p&gt;再次回到第一次打开的CE中，再次附加到游戏，随后输入306DF070进行再次扫描，扫描结果如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;C:%5cUsers%5cadmin%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20220515212804563.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20220515212804563&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;此时仅剩三个值，选取192390进行尝试。选择手动添加地址，选中指针，将偏移填入：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;C:%5cUsers%5cadmin%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20220515212924436.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20220515212924436&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;再次关闭游戏重新打开：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;C:%5cUsers%5cadmin%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20220515213148511.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20220515213148511&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;更改成功生效。&lt;/p&gt;
 </description>
-        </item>
-        <item>
-        <title>Test02</title>
-        <link>https://cutevolution.github.io/hugo-dev/p/test02/</link>
-        <pubDate>Tue, 25 Mar 2025 21:39:42 +0800</pubDate>
-        
-        <guid>https://cutevolution.github.io/hugo-dev/p/test02/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Test01</title>
-        <link>https://cutevolution.github.io/hugo-dev/p/test01/</link>
-        <pubDate>Tue, 25 Mar 2025 21:35:22 +0800</pubDate>
-        
-        <guid>https://cutevolution.github.io/hugo-dev/p/test01/</guid>
-        <description></description>
         </item>
         <item>
         <title>Newnewnew</title>

@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Categories on Myblog</title>
+        <title>Categories on poplars</title>
         <link>https://cutevolution.github.io/hugo-dev/categories/</link>
-        <description>Recent content in Categories on Myblog</description>
+        <description>Recent content in Categories on poplars</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://cutevolution.github.io/hugo-dev/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>cutevolution</copyright>
+        <lastBuildDate>Wed, 26 Mar 2025 12:00:00 +0800</lastBuildDate><atom:link href="https://cutevolution.github.io/hugo-dev/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>技术</title>
+        <link>https://cutevolution.github.io/hugo-dev/categories/%E6%8A%80%E6%9C%AF/</link>
+        <pubDate>Wed, 26 Mar 2025 12:00:00 +0800</pubDate>
+        
+        <guid>https://cutevolution.github.io/hugo-dev/categories/%E6%8A%80%E6%9C%AF/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Syntax</title>
         <link>https://cutevolution.github.io/hugo-dev/categories/syntax/</link>
         <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
